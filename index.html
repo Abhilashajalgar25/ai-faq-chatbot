@@ -3,20 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student AI Chatbot</title>
+  <title>Pixi.AI</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
+<div class="app">
 
-  <h1>🎓 Student AI Assistant</h1>
+  <!-- TOP BAR -->
 
-  <div id="chat-box"></div>
+  <div class="top-bar">
 
-  <div class="input-area">
-    <input type="text" id="user-input" placeholder="Ask your question...">
-    <button onclick="sendMessage()">Send</button>
+    <div>
+      <h1>Pixi.AI</h1>
+      <p>CYBER AI ASSISTANT</p>
+    </div>
+
+    <div class="status">
+      ● ONLINE
+    </div>
+
+  </div>
+
+
+
+  <!-- CHAT -->
+
+  <div id="chat-container">
+
+    <div class="bot-message">
+      Yo dev 👾 Upload image, use mic or chat.
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- INPUT AREA -->
+
+  <div class="bottom-area">
+
+    <!-- IMAGE BUTTON -->
+
+    <button id="image-btn">
+
+      <img
+        src="album-02-stroke-rounded (2).svg"
+        class="icon"
+      >
+
+    </button>
+
+
+
+    <input
+      type="file"
+      id="image-upload"
+      hidden
+      accept="image/*"
+    >
+
+
+
+    <!-- INPUT -->
+
+    <input
+      type="text"
+      id="user-input"
+      placeholder="Type something..."
+    >
+
+
+
+    <!-- MIC -->
+
+    <button id="voice-btn">
+
+      <img
+        src="mic-01-stroke-rounded.svg"
+        class="icon"
+      >
+
+    </button>
+
+
+
+    <!-- SEND -->
+
+    <button id="send-btn">
+      ➤
+    </button>
+
   </div>
 
 </div>
