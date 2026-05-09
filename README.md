@@ -1,2 +1,2 @@
-# ai-faq-chatbot
-AI powered FAQ chatbot using Gemini API
+#Pixi.AI
+AI powered FAQ chatbot using OpenRouter API
