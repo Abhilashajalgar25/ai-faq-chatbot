@@ -109,13 +109,7 @@ async function sendMessage(){
         headers:{
 
           "Authorization":
-          "Bearer YOUR_OPENROUTER_API_KEY",
-
-          "HTTP-Referer":
-          window.location.href,
-
-          "X-Title":
-          "Pixi.AI",
+          "Bearer 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",
 
           "Content-Type":
           "application/json"
@@ -160,10 +154,7 @@ async function sendMessage(){
 
 
 
-    if(
-      data.choices &&
-      data.choices.length > 0
-    ){
+    if(data.choices){
 
       botDiv.innerText =
 
@@ -361,13 +352,7 @@ imageUpload.addEventListener(
             headers:{
 
               "Authorization":
-              "Bearer YOUR_OPENROUTER_API_KEY",
-
-              "HTTP-Referer":
-              window.location.href,
-
-              "X-Title":
-              "Pixi.AI",
+              "Bearer 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",
 
               "Content-Type":
               "application/json"
@@ -424,10 +409,7 @@ imageUpload.addEventListener(
 
 
 
-        if(
-          data.choices &&
-          data.choices.length > 0
-        ){
+        if(data.choices){
 
           botDiv.innerText =
 
