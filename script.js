@@ -122,9 +122,6 @@ async function sendMessage(){
 
         headers:{
 
-          "Authorization":
-          "Bearer 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",
-
           "Content-Type":
           "application/json"
 
@@ -371,8 +368,6 @@ imageUpload.addEventListener(
 
             headers:{
 
-              "Authorization":
-              "Bearer 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",
 
               "Content-Type":
               "application/json"
