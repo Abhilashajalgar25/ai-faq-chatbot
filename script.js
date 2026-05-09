@@ -1,3 +1,13 @@
+// =======================================
+// FAQVERSE AI FULL WORKING CHATBOT
+// TEXT + MIC + IMAGE AI ANALYSIS
+// =======================================
+
+
+// ==========================
+// ELEMENTS
+// ==========================
+
 const sendBtn =
 document.getElementById("send-btn");
 
@@ -19,7 +29,9 @@ document.getElementById("chat-container");
 
 
 
+// ==========================
 // SEND BUTTON
+// ==========================
 
 sendBtn.addEventListener(
   "click",
@@ -29,7 +41,9 @@ sendBtn.addEventListener(
 
 
 
+// ==========================
 // ENTER KEY
+// ==========================
 
 userInput.addEventListener(
 
@@ -48,9 +62,9 @@ userInput.addEventListener(
 
 
 
-// =========================
+// ==========================
 // TEXT AI CHAT
-// =========================
+// ==========================
 
 async function sendMessage(){
 
@@ -88,7 +102,7 @@ async function sendMessage(){
   "bot-message";
 
   botDiv.innerText =
-  "Thinking...";
+  "Typing...";
 
   chatBox.appendChild(botDiv);
 
@@ -129,7 +143,7 @@ async function sendMessage(){
               role:"system",
 
               content:
-              "You are Pixi.AI, a futuristic coder vibe AI assistant."
+              "You are FAQVerse AI, a smart fun Gen Z chatbot."
             },
 
             {
@@ -150,6 +164,8 @@ async function sendMessage(){
 
     const data =
     await response.json();
+
+    console.log(data);
 
 
 
@@ -194,9 +210,9 @@ async function sendMessage(){
 
 
 
-// =========================
+// ==========================
 // MIC FEATURE
-// =========================
+// ==========================
 
 const SpeechRecognition =
 
@@ -252,9 +268,9 @@ if(SpeechRecognition){
 
 
 
-// =========================
+// ==========================
 // IMAGE AI ANALYSIS
-// =========================
+// ==========================
 
 imageBtn.addEventListener(
 
@@ -294,7 +310,7 @@ imageUpload.addEventListener(
 
 
 
-      // SHOW IMAGE
+      // SHOW USER IMAGE
 
       const imgDiv =
       document.createElement("div");
@@ -310,8 +326,11 @@ imageUpload.addEventListener(
       img.src =
       e.target.result;
 
-      img.className =
-      "chat-image";
+      img.style.width =
+      "220px";
+
+      img.style.borderRadius =
+      "15px";
 
 
 
@@ -322,7 +341,8 @@ imageUpload.addEventListener(
 
 
 
-      // BOT ANALYSIS
+
+      // BOT ANALYZING
 
       const botDiv =
       document.createElement("div");
@@ -331,7 +351,7 @@ imageUpload.addEventListener(
       "bot-message";
 
       botDiv.innerText =
-      "Analyzing image...";
+      "Analyzing image 📸...";
 
       chatBox.appendChild(botDiv);
 
@@ -377,7 +397,7 @@ imageUpload.addEventListener(
                       type:"text",
 
                       text:
-                      "Describe this image in detail and explain everything visible."
+                      "Describe this image and answer what is in it."
                     },
 
                     {
@@ -405,6 +425,8 @@ imageUpload.addEventListener(
 
         const data =
         await response.json();
+
+        console.log(data);
 
 
 
